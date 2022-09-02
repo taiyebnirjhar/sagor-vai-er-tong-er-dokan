@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap");
 
+@import url("https://fonts.maateen.me/bangla/font.css");
+
+@import url("https://fonts.maateen.me/apona-lohit/font.css");
+
 :root {
   --main-color: #d3ad7f;
   --black: #13131a;
@@ -8,7 +12,9 @@
 }
 
 * {
-  font-family: "Roboto", sans-serif;
+  /* font-family: "Bangla", sans-serif; */
+  font-family: "AponaLohit", sans-serif;
+
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -62,7 +68,7 @@ section {
 .btn-home {
   margin-top: 1rem;
   display: inline-block;
-  padding: 0.3rem 3rem;
+  padding: 0.7rem 3rem;
   font-size: 1.7rem;
   font-weight: 600;
   color: #fff;
@@ -106,9 +112,9 @@ section {
 
 .header .navbar a {
   margin: 0 3rem;
-  font-size: 2rem;
+  font-size: 1.8rem;
   color: #fff;
-  font-weight: bold;
+  font-weight: 600;
 }
 
 .header .navbar a:hover {
