@@ -26,12 +26,7 @@ document.querySelector("#cart-btn").onclick = () => {
   cartItemContainer.classList.toggle("active");
   navbar.classList.remove("active");
   searchForm.classList.remove("active");
-
-  if (cartItemContainer.children.length === 2) {
-    defaultItem.style = "display: flex";
-  } else {
-    defaultItem.style = "display: none";
-  }
+  emptyContainerChecking();
 };
 
 // onscroll 4 css
@@ -79,6 +74,7 @@ function addOrder(e) {
   const price = parent.childNodes[5].firstChild.textContent;
 
   newOrder(name, price, img);
+  emptyContainerChecking();
 }
 function onClick(name) {
   name.addEventListener("click", (e) => {
@@ -95,6 +91,9 @@ function executeClickEvent() {
 }
 function deleteElement(event) {
   event.target.parentElement.remove();
+  emptyContainerChecking();
+}
+function emptyContainerChecking() {
   if (cartItemContainer.children.length === 2) {
     defaultItem.style = "display: flex";
   } else {
