@@ -6,7 +6,7 @@ let navbar = document.querySelector(".navbar");
 document.querySelector("#menu-btn").onclick = () => {
   navbar.classList.toggle("active");
   searchForm.classList.remove("active");
-  cartItemContainer.classList.remove("active");
+  //   cartItemContainer.classList.remove("active");
 };
 
 // search form 4 css
@@ -15,7 +15,7 @@ let searchForm = document.querySelector(".search-form");
 document.querySelector("#search-btn").onclick = () => {
   searchForm.classList.toggle("active");
   navbar.classList.remove("active");
-  cartItemContainer.classList.remove("active");
+  //   cartItemContainer.classList.remove("active");
 };
 
 // cart Item 4 css

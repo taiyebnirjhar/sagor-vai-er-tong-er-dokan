@@ -229,6 +229,19 @@ section {
   width: 100%;
   text-align: center;
 }
+.header .cart-items-container .totalPriceCount {
+  margin: 1rem;
+  display: flex;
+  justify-content: space-between;
+  font-size: 2rem;
+  font-weight: 900;
+}
+.header .cart-items-container .totalPriceCount .total {
+  color: var(--black);
+}
+.header .cart-items-container .totalPriceCount .totalPrice {
+  color: var(--main-color);
+}
 
 .home {
   min-height: 100vh;
