@@ -27,7 +27,7 @@ document.querySelector("#cart-btn").onclick = () => {
   navbar.classList.remove("active");
   searchForm.classList.remove("active");
 
-  if (cartItemContainer.children === 2) {
+  if (cartItemContainer.children.length === 2) {
     defaultItem.style = "display: flex";
   } else {
     defaultItem.style = "display: none";
@@ -60,7 +60,7 @@ function newOrder(name, price, img) {
 
   div.innerHTML = `
   
-        <span class="fas fa-times"></span>
+        <span class="fas fa-times" onclick="deleteElement(event)"></span>
         <img src="${img}" alt="" />
         <div class="content">
           <h3>${name}</h3>
@@ -68,6 +68,7 @@ function newOrder(name, price, img) {
         </div>
 
     `;
+
   cartItemContainer.insertBefore(div, checkNow);
 }
 
@@ -82,7 +83,6 @@ function addOrder(e) {
 function onClick(name) {
   name.addEventListener("click", (e) => {
     addOrder(e);
-    console.log("clicked");
   });
 }
 function executeClickEvent() {
@@ -93,7 +93,15 @@ function executeClickEvent() {
   onClick(lebuCha);
   onClick(monerCha);
 }
+function deleteElement(event) {
+  event.target.parentElement.remove();
+  if (cartItemContainer.children.length === 2) {
+    defaultItem.style = "display: flex";
+  } else {
+    defaultItem.style = "display: none";
+  }
+}
+
 //apend
 executeClickEvent();
 // card container
-console.log(cartItemContainer.children);
