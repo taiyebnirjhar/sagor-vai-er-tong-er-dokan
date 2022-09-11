@@ -419,15 +419,10 @@ section {
 .review .box-container .box {
   border: var(--border);
   text-align: center;
-  padding: 4rem 2rem;
+  padding: 3rem 2rem;
 }
 
 .review .box-container .box p {
-  display: flex;
-  justify-content: center;
-  height: 50%;
-  font-size: 2rem;
-  align-items: center;
   line-height: 1.8;
   color: #ccc;
   padding: 2rem 0;
@@ -449,6 +444,9 @@ section {
 .review .box-container .box .stars i {
   font-size: 1.5rem;
   color: var(--main-color);
+}
+.userReview {
+  font-size: 2rem;
 }
 
 .contact .row {
