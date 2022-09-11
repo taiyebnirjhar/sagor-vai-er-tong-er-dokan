@@ -2,4 +2,4 @@
 
 #### QR CODE
 
-<h1 align='center'><img src="./images/qr-code-sagor-tong.png"></h1>
+<h1 align='center'><img src="./images/qr-code.png"></h1>
