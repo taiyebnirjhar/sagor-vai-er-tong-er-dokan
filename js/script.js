@@ -6,33 +6,39 @@ let navbar = document.querySelector(".navbar");
 document.querySelector("#menu-btn").onclick = () => {
   navbar.classList.toggle("active");
   searchForm.classList.remove("active");
-  cartItem.classList.remove("active");
+  cartItemContainer.classList.remove("active");
 };
 
-// search form
+// search form 4 css
 let searchForm = document.querySelector(".search-form");
 
 document.querySelector("#search-btn").onclick = () => {
   searchForm.classList.toggle("active");
   navbar.classList.remove("active");
-  cartItem.classList.remove("active");
+  cartItemContainer.classList.remove("active");
 };
 
 // cart Item 4 css
-let cartItem = document.querySelector(".cart-items-container");
+let cartItemContainer = document.querySelector(".cart-items-container");
 const defaultItem = document.querySelector("#default-item");
 
 document.querySelector("#cart-btn").onclick = () => {
-  cartItem.classList.toggle("active");
+  cartItemContainer.classList.toggle("active");
   navbar.classList.remove("active");
   searchForm.classList.remove("active");
+
+  if (cartItemContainer.children === 2) {
+    defaultItem.style = "display: flex";
+  } else {
+    defaultItem.style = "display: none";
+  }
 };
 
 // onscroll 4 css
 window.onscroll = () => {
   navbar.classList.remove("active");
   searchForm.classList.remove("active");
-  cartItem.classList.remove("active");
+  cartItemContainer.classList.remove("active");
 };
 /*******************************************/
 
@@ -46,6 +52,7 @@ const horlicsCha = document.querySelector("#horlics_cha a");
 const coffeeCha = document.querySelector("#coffee_cha a");
 const lebuCha = document.querySelector("#lebu_cha");
 const monerCha = document.querySelector("#moner_cha");
+
 // functions
 function newOrder(name, price, img) {
   const div = document.createElement("div");
@@ -61,7 +68,7 @@ function newOrder(name, price, img) {
         </div>
 
     `;
-  cartItem.insertBefore(div, checkNow);
+  cartItemContainer.insertBefore(div, checkNow);
 }
 
 function addOrder(e) {
@@ -78,13 +85,15 @@ function onClick(name) {
     console.log("clicked");
   });
 }
-
+function executeClickEvent() {
+  onClick(dudhCha);
+  onClick(rongCha);
+  onClick(horlicsCha);
+  onClick(coffeeCha);
+  onClick(lebuCha);
+  onClick(monerCha);
+}
 //apend
-onClick(dudhCha);
-onClick(rongCha);
-onClick(horlicsCha);
-onClick(coffeeCha);
-onClick(lebuCha);
-onClick(monerCha);
-
+executeClickEvent();
 // card container
+console.log(cartItemContainer.children);
